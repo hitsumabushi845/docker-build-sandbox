@@ -19,6 +19,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.ECR_ENDPOINT }}/test-gha:latest
+          tags: ${{ secrets.ECR_ENDPOINT }}/test-gha:${{ github.sha }},${{ secrets.ECR_ENDPOINT }}/test-gha:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
