@@ -1,3 +1,4 @@
+# このコメントで壊れるだろう
 FROM nginx:latest as nginx-stage
 
 COPY ./test.txt /test.txt
